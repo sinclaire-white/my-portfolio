@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-scroll"; 
+import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
-import ThemeToggle from "./ThemeToggle"; // import it
+import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +15,18 @@ const Navbar = () => {
     { id: "contact", label: "Contact" },
   ];
 
+  const menuVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
+
   return (
-    <nav className="w-full z-50">
+    <nav className="w-full fixed top-0 z-50 bg-base-200 shadow-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="home" smooth className="flex items-center text-primary font-bold text-xl cursor-pointer">
+          <Link to="home" smooth duration={500} className="flex items-center text-primary font-bold text-xl cursor-pointer">
             {"</>"}<span className="ml-2">Sifat</span>
           </Link>
 
@@ -30,12 +37,13 @@ const Navbar = () => {
                 key={item.id}
                 to={item.id}
                 smooth
+                duration={500}
                 className="text-primary hover:text-accent cursor-pointer transition-colors"
               >
                 {item.label}
               </Link>
             ))}
-            <ThemeToggle /> {/* Add Theme Toggle */}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -48,24 +56,34 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 px-2  rounded-lg shadow-lg">
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.id}
-                  to={item.id}
-                  smooth
-                  onClick={() => setIsOpen(false)}
-                  className="px-3 py-2 rounded-md text-primary hover:text-accent cursor-pointer"
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <ThemeToggle /> {/* Add theme toggle in mobile menu too */}
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="md:hidden py-4 px-2 rounded-lg"
+              variants={menuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.2 }}
+            >
+              <div className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.id}
+                    to={item.id}
+                    smooth
+                    duration={500}
+                    onClick={() => setIsOpen(false)}
+                    className="px-3 py-2 rounded-md text-primary hover:text-accent cursor-pointer"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <ThemeToggle />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );

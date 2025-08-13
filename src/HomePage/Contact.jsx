@@ -8,7 +8,7 @@ const Contact = () => {
         <h2 className="text-4xl font-bold text-primary text-center mb-12">
           Get In Touch
         </h2>
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Contact Info */}
           <div className="">
             <h3 className="text-2xl font-semibold mb-4 text-primary">
