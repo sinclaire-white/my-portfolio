@@ -19,3 +19,32 @@
 strong {
   @apply text-primary;
 }
+
+
+/* for animated border */
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-angle-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.animated-border {
+  /* This is the key CSS that creates the animated border effect */
+  background: linear-gradient(white, white) padding-box,
+    conic-gradient(from var(--border-angle), transparent, var(--border-color))
+      border-box;
+
+  /* These styles apply to every card */
+  border-radius: 12px;
+  border: 4px solid transparent; /* This creates the space for the gradient */
+  animation: border-angle-rotate 4s infinite linear;
+}

@@ -120,34 +120,34 @@ const Contact = () => {
                 ></textarea>
               </div>
               {/* button */}
-                <div className="flex justify-center">
-      <button
-        className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden
+              <div className="flex justify-center">
+                <button
+                  className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden
                    font-semibold text-primary transition-all duration-150 ease-in-out rounded
                    border border-primary bg-transparent group hover:pl-10 hover:pr-6"
-      >
-        {/* Bottom hover bar */}
-        <span
-          className="absolute bottom-0 left-0 w-full h-1 bg-primary transition-all duration-150 ease-in-out
+                >
+                  {/* Bottom hover bar */}
+                  <span
+                    className="absolute bottom-0 left-0 w-full h-1 bg-primary transition-all duration-150 ease-in-out
                      group-hover:h-full"
-        ></span>
+                  ></span>
 
-        {/* Right icon, moves right out of view */}
-        <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-          <RiMailSendLine className="w-5 h-5 text-primary" />
-        </span>
+                  {/* Right icon, moves right out of view */}
+                  <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                    <RiMailSendLine className="w-5 h-5 text-primary" />
+                  </span>
 
-        {/* Left icon, hidden initially, comes in on hover */}
-        <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 duration-200 ease-out">
-          <RiMailSendLine className="w-5 h-5 text-white" />
-        </span>
+                  {/* Left icon, hidden initially, comes in on hover */}
+                  <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 duration-200 ease-out">
+                    <RiMailSendLine className="w-5 h-5 text-white" />
+                  </span>
 
-        {/* Button text */}
-        <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
-          Send Message
-        </span>
-      </button>
-    </div>
+                  {/* Button text */}
+                  <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+                    Send Message
+                  </span>
+                </button>
+              </div>
             </form>
           </div>
         </div>
