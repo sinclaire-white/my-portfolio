@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
-
+import SplitText from "../UI/SplitText";
 const Hero = () => {
+  const handleAnimationComplete = () => {};
   return (
     <section
       id="home"
@@ -9,18 +10,27 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row items-center gap-10 w-full">
         {/* Left Info */}
         <div className="flex-1 text-left">
-          <h1 className="text-5xl font-bold  mb-4">Shahriyar Rahman Sifat</h1>
-          <h2 className="text-2xl text-accent mb-6">Frontend Developer | React Enthusiast</h2>
-          <p className="text-primary mb-6">
-            Civil Engineering graduate transitioning into full-stack web development. Passionate about building meaningful digital experiences with Web3 technologies.
-          </p>
-          <Link
-            to="contact"
-            smooth
-            className="bg-primary text-secondary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-accent transition-colors"
-          >
-            Contact Me
-          </Link>
+          <h1 className="text-5xl font-semibold  mb-4">
+            Hi, I Am <br></br>
+            <SplitText
+              text="Shahriyar Sifat"
+              className="text-5xl text-primary font-bold text-center"
+              delay={100}
+              duration={0.6}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+              onLetterAnimationComplete={handleAnimationComplete}
+            />
+          </h1>
+          <h2 className="text-2xl text-accent mb-6">
+            Frontend Developer | React Enthusiast
+          </h2>
+          <p className="text-primary mb-6"></p>
         </div>
 
         {/* Right Image */}
@@ -29,7 +39,7 @@ const Hero = () => {
             src="https://i.ibb.co/6JwSh9fv/profile-pic-1.png
 "
             alt="Sifat"
-            className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-accent"
+            className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-2 border-primary"
           />
         </div>
       </div>
