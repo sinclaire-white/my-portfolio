@@ -11,43 +11,39 @@ import Skills from "./Skills";
 
 const Home = () => {
   return (
-    <div id="home" className="min-h-screen">
-      <div className="z-[999]"> {/* Ensure Navbar is on top of everything */}
-        <Slide direction="down" triggerOnce>
-          <Navbar />
-        </Slide>
-      </div>
+    <div className="min-h-screen">
+      
+      
+        <Navbar />
+      
+      <Slide direction="down" triggerOnce>
+        <Hero />
+      </Slide>
 
-      {/* Main content container with top padding equal to navbar height */}
-      <div className="pt-16"> 
-        <Slide direction="down" triggerOnce>
-          <Hero />
-        </Slide>
+     
+      <Slide direction="up" triggerOnce>
+        <About />
+      </Slide>
 
-        <Slide direction="up" triggerOnce>
-          <About />
-        </Slide>
+      <Slide direction="up" triggerOnce>
+        <Education />
+      </Slide>
 
-        <Slide direction="up" triggerOnce>
-          <Education />
-        </Slide>
+      <Slide direction="up" triggerOnce>
+        <Skills />
+      </Slide>
 
-        <Slide direction="up" triggerOnce>
-          <Skills />
-        </Slide>
+      <Slide direction="up" triggerOnce>
+        <Projects />
+      </Slide>
 
-        <Slide direction="up" triggerOnce>
-          <Projects />
-        </Slide>
+      <Slide direction="up" triggerOnce>
+        <Contact />
+      </Slide>
 
-        <Slide direction="up" triggerOnce>
-          <Contact />
-        </Slide>
-
-        <Slide direction="up" triggerOnce>
-          <Footer />
-        </Slide>
-      </div>
+      <Slide direction="up" triggerOnce>
+        <Footer />
+      </Slide>
     </div>
   );
 };

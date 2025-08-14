@@ -4,8 +4,8 @@ import BookLoading from "../assets/Book loading.json"
 
 const Education = () => {
   return (
-    <section id="education" className="mb-4 md:mb-8 lg:mb-12">
-      <h2 className="text-4xl font-bold text-primary text-center mb-4 md:mb-8 lg:mb-12">
+    <section id="education" className="mb-12">
+      <h2 className="text-4xl font-bold text-primary text-center mb-12">
             Education
           </h2>
       <div

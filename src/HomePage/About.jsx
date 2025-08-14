@@ -4,9 +4,9 @@ import person from "../assets/Person.json";
 import { TbHandFingerDown } from "react-icons/tb";
 const About = () => {
   return (
-    <section id="about" className="mb-4 md:mb-8 lg:mb-12">
+    <section id="about" className="mb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-4 md:mb-8 lg:mb-12 text-primary">About Me</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-primary">About Me</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Lottie Animation */}

@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="mb-4 md:mb-8 lg:mb-12">
+    <section id="contact" className="mb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-primary text-center mb-12">
           Get In Touch
