@@ -19,7 +19,7 @@ const About = () => {
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-lg">
             <p className="mb-6 leading-relaxed text-justify">
-              I am on my journey to becoming a full-stack web developer. I
+              I am pursuing a journey to become a full-stack web developer. I
               completed my graduation in Civil Engineering, but I never felt
               truly passionate about it. After graduation, I was unsure of my
               path until one of my relatives introduced me to web development.
