@@ -27,17 +27,15 @@ const Hero = () => {
               onLetterAnimationComplete={handleAnimationComplete}
             />
           </h1>
-          <h2 className="text-2xl text-accent mb-6">
+          <h2 className="text-2xl text-accent">
             Frontend Developer | React Enthusiast
           </h2>
-          <p className="text-primary mb-6"></p>
         </div>
 
         {/* Right Image */}
         <div className="flex-1 flex justify-center">
           <img
-            src="https://i.ibb.co/6JwSh9fv/profile-pic-1.png
-"
+            src="https://i.ibb.co/6JwSh9fv/profile-pic-1.png"
             alt="Sifat"
             className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-2 border-primary"
           />

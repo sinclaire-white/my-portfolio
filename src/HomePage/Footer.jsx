@@ -5,11 +5,11 @@ import { Link } from "react-scroll";
 const Footer = () => {
   return (
     <footer className="text-gray-300">
-      <div className="border-t border-primary py-12">
+      <div className="border-t border-primary pt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             {/* Section 1: Branding & Description */}
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-start">
               <h3 className="text-2xl font-bold text-primary">Shahriyar Rahman Sifat</h3>
               <p className="mt-2 text-sm text-gray-400 max-w-xs">
                 A passionate web developer building modern and responsive web applications.
@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
 
             {/* Section 2: Navigation Links */}
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-start">
               <h4 className="text-lg font-semibold text-primary mb-3">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
 
             {/* Section 3: Social & Contact */}
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-start">
               <h4 className="text-lg font-semibold text-primary mb-3">Connect with Me</h4>
               <div className="flex space-x-4">
                 <a href="https://linkedin.com/in/shahriyar-sifat-xyz" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="text-gray-400 hover:text-primary transition-colors duration-300">
