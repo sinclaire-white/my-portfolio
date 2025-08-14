@@ -1,25 +1,16 @@
-import htmlImg from "../../public/html.png";
-import cssImg from "../../public/css.png";
-import jsImg from "../../public/js.png";
-import reactImg from "../../public/react.png";
-import tailwindImg from "../../public/tailwind.png";
-import nodeImg from "../../public/node.png";
-import mongoImg from "../../public/mongo.png";
-import firebaseImg from "../../public/firebase.png";
-import gitImg from "../../public/git-bash.png";
-import daisyImg from "../../public/daisy.png";
+
 
 const skills = [
-  { name: "HTML5", image: htmlImg, color: "#f97316" }, 
-  { name: "CSS3", image: cssImg, color: "#3b82f6" }, 
-  { name: "JavaScript", image: jsImg, color: "#facc15" }, 
-  { name: "React.js", image: reactImg, color: "#22d3ee" }, 
-  { name: "Tailwind CSS", image: tailwindImg, color: "#38bdf8" }, 
-  { name: "Node.js", image: nodeImg, color: "#22c55e" }, 
-  { name: "MongoDB", image: mongoImg, color: "#16a34a" }, 
-  { name: "Firebase", image: firebaseImg, color: "#DD2C00" }, 
-  { name: "Git", image: gitImg, color: "#FF8080" }, 
-  { name: "DaisyUI", image: daisyImg, color: "#1AD1A5" }, 
+  { name: "HTML5", image: "/html.png", color: "#f97316" }, 
+  { name: "CSS3", image: "/css.png", color: "#3b82f6" }, 
+  { name: "JavaScript", image: "/js.png", color: "#facc15" }, 
+  { name: "React.js", image: "/react.png", color: "#22d3ee" }, 
+  { name: "Tailwind CSS", image: "/tailwind.png", color: "#38bdf8" }, 
+  { name: "Node.js", image: "/node.png", color: "#22c55e" }, 
+  { name: "MongoDB", image: "/mongo.png", color: "#16a34a" }, 
+  { name: "Firebase", image: "/firebase.png", color: "#DD2C00" }, 
+  { name: "Git", image: "/git-bash.png", color: "#FF8080" }, 
+  { name: "DaisyUI", image: "/daisy.png", color: "#1AD1A5" }, 
 ];
 
 const Skills = () => {
@@ -53,5 +44,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-

@@ -2,9 +2,9 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
-import civitas from '../../public/civitas.png';
-import taskTango from '../../public/task-tango.png';
-import forumify from '../../public/forumify.png';
+// import civitas from '../../public/civitas.png';
+// import taskTango from '../../public/task-tango.png';
+// import forumify from '../../public/forumify.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,7 +15,7 @@ const projects = [
     title: 'Forumify',
     description:
       'An interactive MERN stack forum platform that allows users to post, comment, vote, and engage in discussions with role-based access and membership features.',
-    image: forumify,
+    image: '/forumify.png',
     liveLink: 'https://forumify-client.vercel.app/',
     githubLink: 'https://github.com/forumify/forumify-platform',
     technologies: [
@@ -40,7 +40,7 @@ const projects = [
     title: 'Civitas',
     description:
       'A full-featured, community-driven social development event platform where users can create, join, and track local events like cleanups, plantations, and donations.',
-    image: civitas,
+    image: '/civitas.png',
     liveLink: 'https://civitas-client.vercel.app/',
     githubLink: 'https://github.com/Call-for-Code/Project-Sample',
     technologies: [
@@ -65,7 +65,7 @@ const projects = [
     title: 'TaskTango',
     description:
       'A freelance task marketplace platform where users can post tasks, browse tasks, bid, and manage their work opportunities seamlessly.',
-    image: taskTango,
+    image: '/task-tango.png',
     liveLink: 'https://task-tango-client.vercel.app/',
     githubLink: 'https://github.com/Call-for-Code/Project-Sample',
     technologies: [

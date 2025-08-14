@@ -1,4 +1,5 @@
 import Lottie from "lottie-react";
+
 import person from "../assets/Person.json";
 import { TbHandFingerDown } from "react-icons/tb";
 const About = () => {

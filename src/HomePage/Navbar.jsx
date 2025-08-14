@@ -26,8 +26,14 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="home" smooth duration={500} className="flex items-center text-primary font-bold text-xl cursor-pointer">
-            {"</>"}<span className="ml-2">Sifat</span>
+          <Link
+            to="home"
+            smooth
+            duration={500}
+            className="flex items-center text-primary font-bold text-xl cursor-pointer"
+          >
+            <img src="/Sifat.png" alt="" className="h-10 w-10"/>
+            <span className="ml-2">Sifat</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -46,10 +52,13 @@ const Navbar = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button with Accessibility Attributes */}
           <button
             className="md:hidden p-2 rounded-md focus:outline-none text-primary"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
@@ -59,6 +68,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
+              id="mobile-menu"
               className="md:hidden py-4 px-2 rounded-lg"
               variants={menuVariants}
               initial="hidden"
@@ -66,21 +76,25 @@ const Navbar = () => {
               exit="exit"
               transition={{ duration: 0.2 }}
             >
-              <div className="flex flex-col space-y-4">
+              {/* Use a ul and li for better semantics */}
+              <ul className="flex flex-col space-y-4">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.id}
-                    to={item.id}
-                    smooth
-                    duration={500}
-                    onClick={() => setIsOpen(false)}
-                    className="px-3 py-2 rounded-md text-primary hover:text-accent cursor-pointer"
-                  >
-                    {item.label}
-                  </Link>
+                  <li key={item.id}>
+                    <Link
+                      to={item.id}
+                      smooth
+                      duration={500}
+                      onClick={() => setIsOpen(false)}
+                      className="px-3 py-2 rounded-md text-primary hover:text-accent cursor-pointer"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
                 ))}
-                <ThemeToggle />
-              </div>
+                <li className="pl-3">
+                  <ThemeToggle />
+                </li>
+              </ul>
             </motion.div>
           )}
         </AnimatePresence>
