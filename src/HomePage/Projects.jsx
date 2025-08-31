@@ -1,12 +1,7 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
-// import civitas from '../../public/civitas.png';
-// import taskTango from '../../public/task-tango.png';
-// import forumify from '../../public/forumify.png';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -96,14 +91,14 @@ const Projects = () => {
           Projects
         </h2>
         <div className="flex justify-center">
-          <div className="relative rounded-[24px] border border-[#222] p-4 w-full max-w-[900px]">
+          <div className="relative rounded-3xl border border-[#222] bg-[#222] p-6 sm:p-8 w-full pb-12">
             <Swiper
               modules={[Autoplay, Pagination]}
               loop={true}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
-                 pauseOnMouseEnter: true,
+                pauseOnMouseEnter: true,
               }}
               pagination={{
                 clickable: true,
@@ -115,13 +110,13 @@ const Projects = () => {
             >
               {projects.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="w-full bg-[#222] rounded-[12px] flex flex-col p-4 min-h-[600px]">
+                  <div className="w-full rounded-xl flex flex-col p-4 min-h-[36rem]">
                     {/* Image */}
                     <div className="flex-1 flex items-center justify-center p-2">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="rounded-lg object-contain w-full h-auto max-h-[300px]"
+                        className="rounded-lg object-contain w-full h-auto max-h-72"
                       />
                     </div>
 
@@ -140,7 +135,7 @@ const Projects = () => {
                               className="text-white hover:text-primary"
                               title="Live Demo"
                             >
-                              <FiExternalLink size={20} />
+                              <FiExternalLink className="text-xl" />
                             </a>
                             <a
                               href={item.githubLink}
@@ -149,7 +144,7 @@ const Projects = () => {
                               className="text-white hover:text-primary"
                               title="GitHub Repo"
                             >
-                              <FiGithub size={20} />
+                              <FiGithub className="text-xl" />
                             </a>
                           </div>
                         </div>
@@ -178,7 +173,6 @@ const Projects = () => {
                           <ul className="list-inside text-sm text-gray-300">
                             {item.features.slice(0, 3).map((feature, i) => (
                               <li key={i} className="flex items-center gap-2">
-                                
                                 <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
                                 {feature}
                               </li>
